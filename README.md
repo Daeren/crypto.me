@@ -1,7 +1,16 @@
+Nuxt.js:
+```javascript
+import { CryptoMe } from 'crypto.me/types';
+import * as cryptoMe from 'crypto.me';
+
+//---]>
+
+const { aes, rsa } = cryptoMe as CryptoMe;
+```
+
+
 AES:
 ```javascript
-const { aes } = require('crypto.me');
-
 const { key, iv, salt } = await aes.genKeyInfo('password');
 
 //---]>
@@ -19,10 +28,9 @@ const decData = dec.digest();
 console.log((new TextDecoder()).decode(decData));
 ```
 
+
 RSA:
 ```javascript
-const { rsa } = require('crypto.me');
-
 const keyPair = await rsa.genKeyPair();
 const keyPairCopy = rsa.keyPairFromJson(rsa.keyPairToJson(keyPair));
 
