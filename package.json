@@ -20,7 +20,7 @@
   "license": "MIT",
   "main": "./index.js",
   "types": "./types/index.d.ts",
-  "devDependencies": {
+  "dependencies": {
     "node-forge": "^1.3.1"
   }
 }
